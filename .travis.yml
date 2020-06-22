@@ -1,4 +1,9 @@
-sudo: required
+language: ruby
+os: 
+  - linux
+dist: xenial
+sudo: true
+
 services:
   - docker
 
@@ -13,7 +18,7 @@ deploy:
   region: "ap-southeast-1"
   app: "docker"
   env: "Docker-env"
-  bucket_name: "elasticbeanstalk-ap-southeast-1-537372604174"
+  bucket: "elasticbeanstalk-ap-southeast-1-537372604174"
   bucket_path: "docker"
   on:
     branch: "master"
