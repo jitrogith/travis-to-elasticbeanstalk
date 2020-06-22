@@ -11,7 +11,7 @@ before_install:
   - docker build -t stephengrider/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run stephengrider/docker-react npm run test -- --coverage
+  - docker run stephengrider/docker-react npm run test
 
 deploy:
   provider: elasticbeanstalk
@@ -21,6 +21,6 @@ deploy:
   bucket: "elasticbeanstalk-ap-southeast-1-537372604174"
   bucket_path: "docker"
   on:
-    branch: "master"
-  access_key_id: "$AWS_ACCESS_KEY"
-  secret_access_key: "$AWS_SECRET_KEY"
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
