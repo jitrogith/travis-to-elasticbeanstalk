@@ -8,10 +8,10 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">WelcomeS to React</h1>
+          <h1 className="App-title">WelcomeN to React</h1>
         </header>
         <p className="App-intro">
-          I was changed on the Feature branch
+          I was changed on other Branch
         </p>
       </div>
     );
